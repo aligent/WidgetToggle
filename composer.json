@@ -1,0 +1,10 @@
+{
+  "name":"aligent/widgettoggle",
+  "type":"magento-module",
+  "license":"OSL-3.0",
+  "homepage":"",
+  "description":"Adds functionality to the core Magento widgets to allow for them to be enabled/disabled as well as be constrained to show between two dates",
+  "require":{
+    "magento-hackathon/magento-composer-installer":"*"
+  }
+

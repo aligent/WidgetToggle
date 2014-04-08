@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aligent_Widget>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Widget/>
+
+            </depends>
+        </Aligent_Widget>
+    </modules>
+</config>

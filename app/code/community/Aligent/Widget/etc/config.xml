@@ -70,4 +70,16 @@
             </widget_widget_instance_collection_load_before>
         </events>
     </frontend>
+    <crontab>
+        <jobs>
+            <aligent_widget_cache_flush>
+                <schedule>
+                    <cron_expr>0 0 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>aligent_widget/observer::widgetWidgetInstanceFlushCache</model>
+                </run>
+            </aligent_widget_cache_flush>
+        </jobs>
+    </crontab>
 </config>

@@ -49,6 +49,11 @@ class Aligent_Widget_Model_Observer {
         try {
             $type = 'block_html';
             Mage::app()->getCacheInstance()->cleanType($type);
+            Mage::dispatchEvent('adminhtml_cache_refresh_type', array('type' => $type));
+
+            $type = 'full_page';
+            Mage::app()->getCacheInstance()->cleanType($type);
+            Mage::dispatchEvent('adminhtml_cache_refresh_type', array('type' => $type));
 
         } catch (Exception $e) {
             Mage::log($e->getMessage());
@@ -59,7 +64,7 @@ class Aligent_Widget_Model_Observer {
      * Flushes cache if there's any from_date or to_date of any enabled widget equal to today.
      * @param Varien_Event_Observer $oObserver
      */
-    public function widgetWidgetInstanceFlushCache(Varien_Event_Observer $oObserver)
+    public function widgetWidgetInstanceFlushCache()
     {
         /** @var $oWidget Mage_Widget_Model_Widget_Instance */
 
